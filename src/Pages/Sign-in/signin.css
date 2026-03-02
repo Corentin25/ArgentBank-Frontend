@@ -1,0 +1,54 @@
+.logModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  padding: 33px;
+  background-color: var(--whiteBg);
+}
+
+.userIcon {
+  font-size: 22px;
+}
+
+.titleH2 {
+  font-size: 32px;
+  margin: 15px 0px 0px 0px;
+}
+
+.username-password {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px 0px;
+}
+
+.username-password label {
+  font-weight: 600;
+}
+
+.username-password input {
+  font-size: 18px;
+  padding: 5px;
+}
+
+.summitBtn {
+  width: 100%;
+  padding: 8px;
+  margin-top: 15px;
+  border: none;
+  background-color: var(--lightGreen);
+  color: var(--whiteBg);
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 770px) {
+  .logModal {
+    padding: 25px;
+  }
+}

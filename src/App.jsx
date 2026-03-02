@@ -10,13 +10,11 @@ export function App() {
   return (
     <Router>
       <Header />
-      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<SignIn />} />
           <Route path="/profile" element={<User />} />
         </Routes>
-      </main>
       <Footer />
     </Router>
   );

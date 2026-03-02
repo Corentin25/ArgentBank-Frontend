@@ -1,0 +1,63 @@
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  padding: 0px 80px;
+  background-image: url("../../Assets/Tree-background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sloganBloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 365px;
+  height: 210px;
+  padding: 35px;
+  background-color: var(--whiteBg);
+}
+
+.baseLine {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 19px;
+  font-weight: 500;
+  margin: 15px 0px 0px 0px;
+}
+
+.features {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 50px 40px;
+  background-color: var(--whiteBg);
+}
+
+@media (max-width: 770px) {
+  .banner {
+    justify-content: center;
+    padding: 20px;
+    background-position: -400px 0px;
+  }
+  .sloganBloc {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+  .features {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+}

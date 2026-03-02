@@ -10,10 +10,11 @@ export function Header() {
       <nav className="headerBar">
         <Link to="/">
           <img src={logo} alt="Logo ArgentBank" className="logoHeader" />
+          <h1 className="sr-only">Argent Bank</h1>
         </Link>
         <NavLink to="/login" className="user">
-          <FontAwesomeIcon icon={faUserCircle} className="userIcon" />
-          <p className="userLog">Sign In</p>
+          <FontAwesomeIcon icon={faUserCircle} />
+          <p>Sign In</p>
         </NavLink>
       </nav>
     </header>
