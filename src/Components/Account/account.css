@@ -1,0 +1,68 @@
+.account {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--whiteBg);
+  padding: 20px 30px;
+  width: 80%;
+  height: 130px;
+  min-width: 270px;
+}
+
+.accountContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.accountTitle,
+.accountDescription {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.accountAmount {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.accountCta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewTransBtn {
+  padding: 8px;
+  background-color: var(--lightGreen);
+  color: var(--whiteBg);
+  border-color: var(--lightGreen);
+  font-size: 17px;
+  font-weight: 600;
+  width: 200px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.viewTransBtn:hover {
+  background-color: var(--deepGreen);
+  border-color: var(--deepGreen);
+}
+
+@media (max-width: 770px) {
+  .account {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    height: auto;
+  }
+  .accountCta {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .viewTransBtn {
+    width: 100%;
+  }
+}

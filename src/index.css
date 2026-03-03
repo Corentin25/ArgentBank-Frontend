@@ -30,8 +30,9 @@ main {
 
 .darkBg {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
   padding-top: 10px;
   background-color: var(--deepBlue);

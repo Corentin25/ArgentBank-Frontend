@@ -1,32 +1,37 @@
-.userSections {
+.ErrorBloc {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
-  width: 100%;
+  margin-top: 40px;
+  padding: 0px 10px;
 }
 
-.userSections h2 {
-  font-size: 32px;
-  text-align: center;
+.ErrorBloc h2 {
   color: var(--whiteBg);
+  font-size: 45px;
   margin: 0;
 }
 
-.editNameBtn {
-  padding: 10px;
-  margin: 20px 0px;
+.ErrorBloc p {
+  color: var(--whiteBg);
+  text-align: center;
+  font-size: 18px;
+}
+
+.backButton {
+  width: 100%;
+  padding: 8px 20px;
+  margin-top: 15px;
+  border-color: var(--lightGreen);
   background-color: var(--lightGreen);
   color: var(--whiteBg);
-  border-color: var(--lightGreen);
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 15px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
-.editNameBtn:hover {
+.backButton:hover {
   background-color: var(--deepGreen);
   border-color: var(--deepGreen);
 }

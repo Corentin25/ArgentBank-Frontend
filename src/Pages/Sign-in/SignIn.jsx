@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import "./signin.css";
 
+import { Link } from "react-router-dom";
+
 export function SignIn() {
   return (
     <main className="darkBg">
@@ -22,7 +24,11 @@ export function SignIn() {
               <input type="checkbox" id="remember-me" />
               <label htmlFor="remember-me">Remember me</label>
             </div>
-            <button className="summitBtn">Sign In</button>
+            {/* Enlever <Link> pour gérer la soumission du bouton une fois le Token reçu */}
+            <Link to="/profile">
+              <button className="summitBtn">Sign In</button>
+            </Link>
+            {/* ------------------------------------------------------------------------ */}
           </form>
         </div>
       </section>

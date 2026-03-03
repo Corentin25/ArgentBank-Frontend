@@ -45,6 +45,11 @@
   font-weight: 600;
   text-decoration: underline;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.summitBtn:hover {
+  background-color: var(--deepGreen);
 }
 
 @media (max-width: 770px) {
