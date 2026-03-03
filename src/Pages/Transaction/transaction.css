@@ -1,0 +1,13 @@
+.tranSections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.soon {
+    color: var(--whiteBg);
+    font-size: 30px;
+    margin-top: 80px;
+}

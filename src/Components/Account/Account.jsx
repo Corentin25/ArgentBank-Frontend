@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom";
 import "./account.css";
 
-export function Account() {
+export function Account({
+  buttonText = "View transactions",
+  linkPath = "/transaction",
+}) {
   return (
     <div className="account">
       <div className="accountContent">
@@ -11,7 +15,9 @@ export function Account() {
         {/* --------------------------------------------------------- */}
       </div>
       <div className="accountCta">
-        <button className="viewTransBtn">View transactions</button>
+        <Link to={linkPath}>
+          <button className="viewTransBtn">{buttonText}</button>
+        </Link>
       </div>
     </div>
   );

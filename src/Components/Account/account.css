@@ -5,9 +5,9 @@
   align-items: center;
   background-color: var(--whiteBg);
   padding: 20px 30px;
-  width: 80%;
+  margin-top: 30px;
+  width: 81%;
   height: 130px;
-  min-width: 270px;
 }
 
 .accountContent {
@@ -55,7 +55,7 @@
   .account {
     flex-direction: column;
     align-items: flex-start;
-    width: 80%;
+    width: 100%;
     height: auto;
   }
   .accountCta {
