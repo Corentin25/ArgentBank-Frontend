@@ -34,19 +34,22 @@
   align-items: center;
 }
 
-.viewTransBtn {
-  padding: 8px;
+.accountBtn {
+  padding: 9px;
   background-color: var(--lightGreen);
   color: var(--whiteBg);
-  border-color: var(--lightGreen);
-  font-size: 17px;
+  border-right: solid var(--deepGreen) 2px;
+  border-bottom: solid var(--deepGreen) 2px;
+  font-size: 18px;
   font-weight: 600;
+  text-align: center;
+  text-decoration: none;
   width: 200px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
-.viewTransBtn:hover {
+.accountBtn:hover {
   background-color: var(--deepGreen);
   border-color: var(--deepGreen);
 }
@@ -62,7 +65,7 @@
     margin-top: 20px;
     width: 100%;
   }
-  .viewTransBtn {
+  .accountBtn {
     width: 100%;
   }
 }

@@ -15,8 +15,8 @@ export function Account({
         {/* --------------------------------------------------------- */}
       </div>
       <div className="accountCta">
-        <Link to={linkPath}>
-          <button className="viewTransBtn">{buttonText}</button>
+        <Link to={linkPath} className="accountBtn">
+          {buttonText}
         </Link>
       </div>
     </div>

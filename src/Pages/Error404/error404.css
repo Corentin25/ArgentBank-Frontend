@@ -20,13 +20,15 @@
 }
 
 .backButton {
-  width: 100%;
-  padding: 8px 20px;
-  margin-top: 15px;
-  border-color: var(--lightGreen);
+  padding: 10px;
+  margin-top: 10px;
   background-color: var(--lightGreen);
   color: var(--whiteBg);
-  font-size: 15px;
+  border-right: solid var(--deepGreen) 2px;
+  border-bottom: solid var(--deepGreen) 2px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }

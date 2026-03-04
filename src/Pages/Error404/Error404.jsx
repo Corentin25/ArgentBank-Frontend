@@ -7,8 +7,8 @@ export function Error404() {
       <section className="ErrorBloc">
         <h2>Error 404</h2>
         <p>Sorry, the page you requested does not exist.</p>
-        <Link to="/">
-          <button className="backButton">Back to the home page</button>
+        <Link to="/" className="backButton">
+          Back to the home page
         </Link>
       </section>
     </main>

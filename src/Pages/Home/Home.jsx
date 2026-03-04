@@ -45,6 +45,7 @@ export function Home() {
         </div>
       </section>
       <section className="features">
+        <h3 className="sr-only">Features</h3>
         {features.map((feature) => (
           <Card
             key={feature.id}
