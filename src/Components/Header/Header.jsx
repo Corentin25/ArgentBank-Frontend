@@ -10,6 +10,7 @@ import { setLogout } from "../../Redux/authSlice";
 
 export function Header() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const user = useSelector((state) => state.auth.user);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ export function Header() {
           <div className="userNav">
             <NavLink to="/profile" className="user">
               <FontAwesomeIcon icon={faUserCircle} />
-              <p>Tony</p>
+              <p>{user ? user.firstName : "Profile"}</p>
             </NavLink>
             <button onClick={handleLogout} className="logoutBtn">
               <FontAwesomeIcon icon={faSignOutAlt} />
