@@ -1,48 +1,21 @@
 import { Account } from "../../Components/Account/Account";
 import { EditUser } from "../../Components/EditUser/EditUser";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Navigate } from "react-router-dom";
 import "./user.css";
 
 //REDUX
-import { useSelector, useDispatch } from "react-redux";
-import { setProfile } from "../../Redux/authSlice";
+import { useSelector } from "react-redux";
 
 export function User() {
-  const dispatch = useDispatch();
-
-  const token = useSelector((state) => state.auth.token);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const user = useSelector((state) => state.auth.user);
 
   const [isEditing, setIsEditing] = useState(false);
 
-  useEffect(() => {
-    const userProfile = async () => {
-      if (!token) return;
-
-      try {
-        const response = await fetch(
-          "http://localhost:3001/api/v1/user/profile",
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-          },
-        );
-
-        if (response.ok) {
-          const data = await response.json();
-          dispatch(setProfile(data.body));
-        } else {
-          console.error("Error retrieving profile");
-        }
-      } catch (error) {
-        console.error("Network error :", error);
-      }
-    };
-    userProfile();
-  }, [dispatch, token]);
+  if (!isAuthenticated) {
+    return <Navigate to="/login" />;
+  }
 
   return (
     <main className="darkBg">

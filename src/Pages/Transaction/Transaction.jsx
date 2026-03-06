@@ -1,11 +1,20 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Navigate } from "react-router-dom";
 import { Account } from "../../Components/Account/Account";
 import "./transaction.css";
 
+//REDUX
+import { useSelector } from "react-redux";
+
 export function Transaction() {
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+
   const location = useLocation();
   const { accountTitle, accountAmount, accountDescription } =
     location.state || {};
+
+  if (!isAuthenticated) {
+    return <Navigate to="/login" />;
+  }
 
   return (
     <main className="darkBg">

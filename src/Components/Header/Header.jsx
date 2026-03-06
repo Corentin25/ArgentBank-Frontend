@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle, faSignOutAlt } from "@fortawesome/free-solid-svg-icons";
@@ -6,14 +7,44 @@ import "./header.css";
 
 //REDUX
 import { useSelector, useDispatch } from "react-redux";
-import { setLogout } from "../../Redux/authSlice";
+import { setLogout, setProfile } from "../../Redux/authSlice";
 
 export function Header() {
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-  const user = useSelector((state) => state.auth.user);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const token = useSelector((state) => state.auth.token);
+  const user = useSelector((state) => state.auth.user);
+
+  useEffect(() => {
+    const userProfile = async () => {
+      if (!token) return;
+
+      try {
+        const response = await fetch(
+          "http://localhost:3001/api/v1/user/profile",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+          },
+        );
+
+        if (response.ok) {
+          const data = await response.json();
+          dispatch(setProfile(data.body));
+        } else {
+          console.error("Error retrieving profile");
+        }
+      } catch (error) {
+        console.error("Network error :", error);
+      }
+    };
+    userProfile();
+  }, [dispatch, token]);
 
   const handleLogout = () => {
     dispatch(setLogout());

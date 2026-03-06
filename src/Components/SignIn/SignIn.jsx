@@ -29,7 +29,7 @@ export function SignIn() {
       });
 
       if (!response.ok) {
-        throw new Error("Nom d'utilisateur ou mot de passe incorrect");
+        throw new Error("Incorrect username or password");
       }
 
       const data = await response.json();
