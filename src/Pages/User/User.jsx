@@ -14,7 +14,7 @@ export function User() {
   const [isEditing, setIsEditing] = useState(false);
 
   if (!isAuthenticated) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/" />;
   }
 
   return (
