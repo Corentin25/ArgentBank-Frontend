@@ -62,7 +62,7 @@ export function Header() {
           <div className="userNav">
             <NavLink to="/profile" className="user">
               <FontAwesomeIcon icon={faUserCircle} />
-              <p>{user ? user.firstName : "Profile"}</p>
+              <p>{user ? user.userName || `${user.firstName}` : "Profile"}</p>
             </NavLink>
             <button onClick={handleLogout} className="logoutBtn">
               <FontAwesomeIcon icon={faSignOutAlt} />
