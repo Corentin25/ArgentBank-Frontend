@@ -101,12 +101,33 @@ paths:
           description: Invalid Fields
         '500':
           description: Internal Server Error
+  /user/accounts:
+    get:
+      tags:
+        - User Module
+      summary: User Accounts API
+      description: API for retrieving all bank accounts for the logged-in user
+      security:
+        - Bearer: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Accounts successfully retrieved
+          schema:
+            type: array
+            items:  
+              $ref: '#/definitions/Account'
+        '400':
+          description: Invalid Fields
+        '500':
+          description: Internal Server Error
   /accounts/{accountId}/transactions:
     get:
       tags:
         - Transaction Module
       summary: Account Transaction API
-      description: API for retrieve transactions from an account
+      description: API to retrieve current month transactions for an account
       security:
         - Bearer: []
       parameters:
@@ -248,6 +269,21 @@ definitions:
     properties:
       userName:
         type: string
+  Account:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The unique identifier of the bank account
+      name:
+        type: string
+        description: Account name
+      balance:
+        type: number
+        description: Current balance amount
+      type:
+        type: string
+        description: Account type
   Transaction:
     type: object
     properties:
