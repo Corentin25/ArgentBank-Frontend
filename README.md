@@ -1,16 +1,39 @@
-# React + Vite
+# Argent Bank - Application Web Front-End
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Développé dans le cadre de la formation Intégrateur Web, Argent Bank est une application web bancaire moderne. Ce projet se concentre sur l'intégration du front-end, l'authentification utilisateur sécurisée via API, et la gestion globale de l'état de l'application.
 
-Currently, two official plugins are available:
+## Technologies Utilisées
+* React
+* Redux Toolkit (State management)
+* Vite
+* CSS natif
+* API REST (Swagger)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prérequis
+* Node.js (version v18 ou supérieure recommandée)
+* npm ou yarn
 
-## React Compiler
+## Installation et Démarrage du Back-end
+Pour que l'application front-end fonctionne et puisse authentifier les utilisateurs, vous devez d'abord cloner et lancer l'API back-end fournie pour ce projet.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Cloner le repository du back-end : 
+`git clone https://github.com/Corentin25/ArgentBank-Backend.git`
+2. Naviguer dans le dossier : 
+`cd ArgentBank-Backend`
+3. Installer les dépendances : 
+`npm install`
+4. Démarrer le serveur local (généralement sur le port 3001) : 
+`npm run dev:server`
 
-## Expanding the ESLint configuration
+## Installation et Démarrage du Front-end
+Une fois le back-end en cours d'exécution, vous pouvez lancer l'interface utilisateur.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Cloner ce repository : 
+`git clone https://github.com/Corentin25/ArgentBank-Frontend.git`
+2. Naviguer dans le dossier du projet : 
+`cd ArgentBank-Frontend`
+3. Installer les dépendances : 
+`npm install`
+4. Démarrer le serveur de développement : 
+`npm run dev`
